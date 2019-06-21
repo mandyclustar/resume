@@ -10,7 +10,7 @@ MacTex comprises a build-in editor TeXShop. You can use TextEditor or oher alter
 
 ### step 2
 
-Install macro package ctex or XeCJK for chinese suporting
+Install macro package ctex or XeCJK for chinese supporting
 ```
 sudo -i
 tlmgr update --self
