@@ -1,0 +1,114 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt,a4paper]{moderncv}
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+\usepackage{xunicode, xltxtra}
+%\usepackage[colorlinks,linkcolor=red]{hyperref}
+\XeTeXlinebreaklocale "zh"
+\widowpenalty=10000
+
+%\setmainfont[Mapping=tex-text]{文泉驿正黑}
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{CJK}
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+\setmainfont[Mapping=tex-text]{Hiragino Sans GB}
+\setsansfont[Mapping=tex-text]{Hiragino Sans GB}
+\CJKtilde
+
+% personal data
+
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% 个人信息
+\firstname{张}
+\familyname{曼妮}
+\title{个人简历}                      % 可选项、如不需要可删除本行
+\address{住址:北京市海淀区西二旗铭科苑}{籍贯:湖北\,\,年龄:29\,\,}             % 可选项、如不需要可删除本行
+\mobile{+86~18217376283}                         % 可选项、如不需要可删除本行
+%\phone{+2~(345)~678~901}                          % 可选项、如不需要可删除本行
+%\fax{+3~(456)~789~012}                            % 可选项、如不需要可删除本行
+\email{footloosemandy@gmail.com}                    % 可选项、如不需要可删除本行
+%\homepage{dinever.com}                  % 可选项、如不需要可删除本行
+%\photo[64pt]{421281199009120017.jpg}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+
+\begin{document}
+\maketitle
+\renewcommand{\baselinestretch}{1}
+
+\section{教育背景}
+\cventry{2014 -- 2017}{硕士}{华东师范大学}{软件工程}{}{}  % 第3到第6编码可留白
+\cventry{2008 -- 2012}{学士}{华中师范大学}{通信工程}{}{}
+%\cventry{2005 -- 2008}{高中}{湖北省鄂南高级中学}{}{}{}  % 第3到第6编码可留白
+
+%\section{毕业论文}
+%\cvitem{题目}{\emph{题目}}
+%\cvitem{导师}{导师}
+%\cvitem{说明}{\small 论文简介}
+
+\section{项目经历}
+\renewcommand{\baselinestretch}{1}
+\cventry{2019.1--至今}{北京翰海星云科技有限公司}{}{}{}
+{Clustar\,\,AI, 面向企业的在线机器学习平台, 它采用RDMA网络，具有优越的分布式模型训练性能。
+\begin{itemize}
+\item 参与TensorFlow通信模块GDR的优化工作，利用RDMA技术传输远程GPU内存中的Tensor，绕过主机内存和CPU，提升Tensorflow框架的网络传输性能。
+\item 优化Tensorflow模型训练的分布式策略，提升大规模集群下模型的训练速度。
+\end{itemize}}
+\\
+\cventry{2018.5\\--2019.1}{思科中国研发中心}{}{}{}
+{Cloud\,\,CMTS，基于微服务的下一代PE路由。采用k8s/docker架构部署，实现嵌入式设备向cloud的转换。
+\begin{itemize}
+\item 负责Admission control相关的microservice开发，基于当前可用带宽拒绝/接受新的traffic flow请求。避免当过多流共享同一个链路时，导致所有流的严重退化。提供CIR service flow，over DOCSIS (VDOC)，Multicast QoS的相关支持
+\end{itemize}}
+\\
+\cventry{2017.7\\--2019.1}{思科中国研发中心}{}{}{}
+{Cisco cBR系列接入网融合宽带路由，作为单一设备连接调制解调器cable modem或数字机顶盒STB向住宅和商业用户提供高速数据、宽带和IP电话服务。\\
+个人职责:
+\begin{itemize}
+\item 负责High\,\,Availability相关功能模块的开发和维护，提供备卡1:N的切换保护，保证服务的高可靠性
+\item 解决HA相关问题，在线处理全球用户case
+\item 参与cBR8新一代产品中Remote RHY设备上HA功能的开发
+\end{itemize}}
+
+\cventry{2012--2014}{上海斐讯数据通信公司}{}{}{}
+{参与多款EPON，GPON，无线家庭网关的设备驱动开发涉及sdr，ddr，flash，usb，i2c，了解应用层的基本协议，
+熟悉LINUX BSP，掌握一般软件测试方法}
+
+\section{科研经历}\cvline{}{基于ROS机器人操作系统制作一款低成本室内自主移动社交机器人}
+\cvline{}{发表论文: \href{https://ieeexplore.ieee.org/abstract/document/7558699}{\textcolor[rgb]{0,0,0}{Formally verifying navigation safety for ground robots(In 2016 IEEE International Conference on Mechatronics and Automation.1000--1005)}}}
+
+\section{语言技能}
+\cvline{英语}{CET-6，可作为工作语言，可以读写开发文档，看论文}
+
+\section{专业技能}
+\renewcommand{\baselinestretch}{1}
+
+\cvline{}{熟练掌握c/go/python开发， 熟悉常见算法和数据结构}
+\cvline{}{熟悉RDMA，包括RoCE和IB，了解TensorFlow网络架构}
+\cvline{}{掌握kubernets框架，熟悉docker开发}
+\cvline{}{熟悉linux操作系统，shell脚本}
+\cvline{}{掌握kafka，zmq等messgae bus，熟悉cassandra，mongodb，etcd等存储服务}
+\cvline{}{掌握git/svn/acme等软件版本管理工具，熟悉CI/CD工具Jenkins}
+
+
+
+
+
+%\cvline{意大利语}{\textbf{QCER A2}，具有基本的日常听说能力}
+
+
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
